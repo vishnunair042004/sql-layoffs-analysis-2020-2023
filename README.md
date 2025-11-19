@@ -1,7 +1,7 @@
 
 ---
 
-# 📊 **Global Layoffs Analysis (2020–2023) — SQL Project**
+# 📊 **Global Layoffs Analysis  — SQL Project**
 
 This project analyzes global layoff trends from 2020 to 2023 using SQL.
 The workflow includes **data cleaning**, **standardization**, and **exploratory data analysis (EDA)** performed entirely in SQL.
