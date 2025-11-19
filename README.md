@@ -347,7 +347,7 @@ Here is your **Author section**, professionally formatted and ready to append at
 # 👤 **Author**
 
 **Vishnu Nair**
-Aspiring Data Analyst | SQL • Power BI • Excel • Python (beginner)
+Aspiring Data Analyst | SQL • Power BI • Excel • Python 
 
 📧 **Email:** [vishnunairofficial2004@gmail.com]
 🔗 **LinkedIn:** (www.linkedin.com/in/vishnu-nair-b6a764341)
