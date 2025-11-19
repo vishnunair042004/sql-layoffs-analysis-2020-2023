@@ -166,45 +166,177 @@ This dataset is now ready for the **Exploratory Data Analysis (EDA)** phase.
 
 ---
 
+Below is the **continued README**, now including the **EDA section**, written in a clean, professional, industry-ready format.
+
+You can directly paste this below your **Data Cleaning** section inside your GitHub README.
+
+---
+
 # 🔍 **2. Exploratory Data Analysis (EDA)**
 
-*(To be added once EDA queries are shared.)*
+After cleaning and standardizing the dataset, the next step was to perform **Exploratory Data Analysis (EDA)** to identify patterns, trends, and anomalies in global layoffs from 2020–2023.
 
-The EDA section will include:
-
-* Layoffs by year
-* Layoffs by country
-* Layoffs by industry
-* Layoffs by company
-* Funding vs layoffs
-* Stage-wise analysis
-* Month-over-month trends
+The EDA was performed entirely in SQL and includes both **simple summaries** and **advanced analytical queries** using window functions and CTEs.
 
 ---
 
-# 📦 **Repository Structure (Recommended)**
+# 📌 **Overview of EDA Goals**
 
-```
-📁 global-layoffs-sql-analysis
-│
-├── README.md
-├── data/
-│   ├── layoffs_raw.csv
-│   └── layoffs_cleaned.csv
-│
-├── sql/
-│   ├── 1_data_cleaning/
-│   └── 2_eda/
-│
-└── screenshots/
-```
+The analysis focuses on answering the following questions:
+
+* Which companies had the highest layoffs?
+* What industries were most impacted?
+* How did layoffs differ across countries and locations?
+* What percentage of companies experienced complete (100%) layoffs?
+* How have layoffs trended over months and years?
+* Which companies dominated layoffs each year?
+* What is the cumulative (rolling) number of layoffs over time?
 
 ---
 
-If you want, I can now also create the:
+# 📊 **2.1 Basic Summary Metrics**
 
-✔ **EDA README section**
-✔ **SQL file names & descriptions**
-✔ **Full repository README.md combining cleaning + EDA**
+### ✔ Maximum layoffs in a single event
 
-Just share your EDA SQL queries next.
+Identified the largest individual layoff event across the dataset.
+
+### ✔ Percentage of workforce laid off
+
+Calculated:
+
+* Maximum layoff percentage
+* Minimum non-null layoff percentage
+
+This highlighted companies that laid off **100% of their workforce**, indicating shutdowns or bankruptcies.
+
+### ✔ Companies that laid off 100% of employees
+
+A query filtered on `percentage_laid_off = 1`, showing mostly startups that completely ceased operations.
+
+Sorting by funding revealed:
+
+* Companies with *significant funding* that still collapsed
+* Examples include highly funded EV and media startups
+
+---
+
+# 📌 **2.2 Aggregated Layoff Insights**
+
+These queries used `GROUP BY` to explore layoffs across dimensions.
+
+### ✔ Companies with largest single-day layoffs
+
+Sorted by `total_laid_off` to identify major events.
+
+### ✔ Companies with the highest total layoffs (2020–2023)
+
+Summed layoffs across all events, showing long-term impact.
+
+### ✔ Layoffs by location
+
+Reveals which cities were most affected during the period.
+
+### ✔ Layoffs by country
+
+Shows cross-country impact and highlights the most affected regions.
+
+### ✔ Layoffs by year
+
+Grouped by `YEAR(date)` to understand year-on-year trends.
+
+### ✔ Layoffs by industry
+
+Shows industries with the highest labor impact:
+
+* Tech
+* Retail
+* Crypto
+* Transportation
+* Healthcare
+
+### ✔ Layoffs by funding stage
+
+Analyzed startup ecosystem impact:
+
+* Seed
+* Series A/B/C
+* Pre-IPO
+* Post-IPO
+
+---
+
+# 🏆 **2.3 Advanced EDA (CTEs + Window Functions)**
+
+This section includes more sophisticated analysis using:
+
+* Common Table Expressions (CTEs)
+* `DENSE_RANK()`
+* Rolling totals
+* Monthly aggregation
+
+---
+
+## 🔹 **A. Top 3 Companies With Most Layoffs Each Year**
+
+A two-level CTE approach was used:
+
+1. **CTE 1:** Calculate total layoffs per company per year
+2. **CTE 2:** Rank companies within each year using `DENSE_RANK()`
+3. Filter top 3 per year
+
+This highlights:
+
+* Year-wise major contributors to layoffs
+* Changing patterns over time (e.g., COVID impact, tech downturn, market corrections)
+
+---
+
+## 🔹 **B. Rolling Total Layoffs (Month-by-Month)**
+
+A monthly summary was created using `SUBSTRING(date,1,7)` to extract `YYYY-MM`.
+
+A rolling sum was then calculated using:
+
+```
+SUM(total_laid_off) OVER (ORDER BY dates ASC)
+```
+
+This shows:
+
+* The cumulative global layoff burden over time
+* Trend lines for market stress
+* Peaks during COVID waves and post-2022 tech downturn
+
+---
+
+# 📈 **2.4 Key Insights (Summary of EDA Findings)**
+
+*(You can adjust this once you explore the dataset visuals yourself)*
+
+* Major layoffs peaked in **2022 and early 2023**, driven largely by tech.
+* Several companies completely shut down (100% layoffs).
+* The **United States** had the highest total layoffs.
+* Tech, Retail, and Crypto industries were the most heavily impacted.
+* Funding stage analysis showed significant layoffs even in **late-stage and well-funded companies**.
+* Rolling totals indicated a consistent upward trend during major global events such as:
+
+  * COVID-19
+  * Post-pandemic restructuring
+  * Global recession fears (2022–2023)
+
+---
+
+# 🧩 **Final Notes**
+
+Both **data cleaning** and **EDA** were executed entirely in SQL, following a structured analytics approach:
+
+1. Import
+2. Clean
+3. Standardize
+4. Aggregate
+5. Analyze
+6. Interpret
+
+This repository provides a complete SQL-based analytical workflow—suitable for data analysis portfolios and learning projects.
+
+---
