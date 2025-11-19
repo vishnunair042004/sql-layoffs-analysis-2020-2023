@@ -340,3 +340,16 @@ Both **data cleaning** and **EDA** were executed entirely in SQL, following a st
 This repository provides a complete SQL-based analytical workflow—suitable for data analysis portfolios and learning projects.
 
 ---
+Here is your **Author section**, professionally formatted and ready to append at the end of your README:
+
+---
+
+# 👤 **Author**
+
+**Vishnu Nair**
+Aspiring Data Analyst | SQL • Power BI • Excel • Python (beginner)
+
+📧 **Email:** [vishnunairofficial2004@gmail.com]
+🔗 **LinkedIn:** (www.linkedin.com/in/vishnu-nair-b6a764341)
+
+---
