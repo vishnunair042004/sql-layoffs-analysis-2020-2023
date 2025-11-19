@@ -7,8 +7,8 @@ This project analyzes global layoff trends from 2020 to 2023 using SQL.
 The workflow includes **data cleaning**, **standardization**, and **exploratory data analysis (EDA)** performed entirely in SQL.
 
 The dataset is taken from Kaggle:
-*“Layoffs Dataset (2022–2023)” by Swaptr.*
-https://www.kaggle.com/datasets/swaptr/layoffs-2022
+*“Layoffs Dataset (2022–2023)” by Swaptr-https://www.kaggle.com/datasets/swaptr/layoffs-2022*
+
 
 ---
 
