@@ -328,6 +328,11 @@ This highlights:
 * Year-wise major contributors to layoffs
 * Changing patterns over time (e.g., COVID impact, tech downturn, market corrections)
 
+<img width="1132" height="400" alt="image" src="https://github.com/user-attachments/assets/1d7b8278-a6a3-4f73-aa43-c6b7395db727" />
+<img width="315" height="281" alt="image" src="https://github.com/user-attachments/assets/9f5a41a9-801a-49e7-86c0-3e5768d93d47" />
+
+
+
 ---
 
 ## 🔹 **B. Rolling Total Layoffs (Month-by-Month)**
@@ -346,11 +351,14 @@ This shows:
 * Trend lines for market stress
 * Peaks during COVID waves and post-2022 tech downturn
 
+<img width="720" height="266" alt="image" src="https://github.com/user-attachments/assets/5507a81e-c421-40f8-8365-2b9b14eb952e" />
+<img width="225" height="448" alt="image" src="https://github.com/user-attachments/assets/83557e31-5de2-4666-9238-4f648b3338ee" />
+
+
 ---
 
 # 📈 **2.4 Key Insights (Summary of EDA Findings)**
 
-*(You can adjust this once you explore the dataset visuals yourself)*
 
 * Major layoffs peaked in **2022 and early 2023**, driven largely by tech.
 * Several companies completely shut down (100% layoffs).
@@ -379,7 +387,6 @@ Both **data cleaning** and **EDA** were executed entirely in SQL, following a st
 This repository provides a complete SQL-based analytical workflow—suitable for data analysis portfolios and learning projects.
 
 ---
-Here is your **Author section**, professionally formatted and ready to append at the end of your README:
 
 ---
 
