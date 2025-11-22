@@ -89,13 +89,15 @@ Several inconsistencies were corrected to ensure uniformity across categories.
 
 ### 🔹 **3.1 Fixing Blank & NULL Industry Values**
 
-<img width="291" height="110" alt="image" src="https://github.com/user-attachments/assets/6183c676-c3b2-4138-aa2a-6f96f1362769" />
 
 * Empty strings were converted to `NULL`
 * Missing industries were backfilled by matching company names
 * If a company had at least one valid industry, the NULL rows were updated
 
 This automated backfilling avoided manual corrections.
+
+
+<img width="291" height="110" alt="image" src="https://github.com/user-attachments/assets/6183c676-c3b2-4138-aa2a-6f96f1362769" />
 <img width="322" height="152" alt="image" src="https://github.com/user-attachments/assets/ffd0f4f2-51fb-41b3-8662-31460f9aee6b" />
 
 
@@ -104,12 +106,13 @@ This automated backfilling avoided manual corrections.
 ### 🔹 **3.2 Standardizing Industry Names**
 
 Inconsistent crypto labels were standardized:
-<img width="118" height="66" alt="image" src="https://github.com/user-attachments/assets/317d4050-1b72-4962-ab11-b4c8b0e1ae3a" />
-
 
 * "CryptoCurrency" → "Crypto"
 * "Crypto Currency" → "Crypto"
+
  
+<img width="118" height="66" alt="image" src="https://github.com/user-attachments/assets/317d4050-1b72-4962-ab11-b4c8b0e1ae3a" />
+
 
 <img width="547" height="91" alt="image" src="https://github.com/user-attachments/assets/670aaaa9-1582-4645-a34c-983bbfe25c55" />
 
@@ -118,7 +121,7 @@ Inconsistent crypto labels were standardized:
 ### 🔹 **3.3 Cleaning Country Names**
 
 Some rows contained `"United States."` (with trailing period).
-<img width="221" height="44" alt="image" src="https://github.com/user-attachments/assets/ccd8c07e-71f6-425c-8dee-e9e39499fc0f" />
+
 
 Used:
 
@@ -127,6 +130,8 @@ TRIM(TRAILING '.' FROM country)
 ```
 
 to standardize the country values.
+
+<img width="221" height="44" alt="image" src="https://github.com/user-attachments/assets/ccd8c07e-71f6-425c-8dee-e9e39499fc0f" />
 <img width="430" height="54" alt="image" src="https://github.com/user-attachments/assets/5b50ed2a-0141-46ca-bf82-1b2582386062" />
 
 
@@ -135,7 +140,7 @@ to standardize the country values.
 ### 🔹 **3.4 Converting Date Format to DATE Type**
 
 The `date` field was stored as **text ("MM/DD/YYYY")**.
-<img width="90" height="212" alt="image" src="https://github.com/user-attachments/assets/0cba2ee8-a394-47ac-a9d5-d6ef17c49647" />
+
 
 
 Steps:
@@ -144,6 +149,8 @@ Steps:
 2. Updated column type to SQL `DATE`
 
 This enables proper date-based analysis during EDA.
+
+<img width="90" height="212" alt="image" src="https://github.com/user-attachments/assets/0cba2ee8-a394-47ac-a9d5-d6ef17c49647" />
 <img width="419" height="63" alt="image" src="https://github.com/user-attachments/assets/af5bcd8e-b33f-46de-9a8b-0e631337611f" />
 <img width="87" height="191" alt="image" src="https://github.com/user-attachments/assets/c92d2a3e-eea6-4d42-a4e9-2b4ef1138d89" />
 
@@ -176,6 +183,8 @@ Rows where **both**:
 * `percentage_laid_off IS NULL`
 
 were deleted because they provide no value for analysis.
+
+
  <img width="546" height="213" alt="image" src="https://github.com/user-attachments/assets/9a25ae1c-8edb-4b61-bf3f-ba1f003b9b55" />
  <img width="387" height="79" alt="image" src="https://github.com/user-attachments/assets/f02f8b5a-bbf8-4b04-9e41-eb0a22d10b22" />
 
