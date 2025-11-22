@@ -20,6 +20,8 @@ This project consists of two main parts:
 2. **Exploratory Data Analysis (SQL)** *(will be added soon)*
 
 Below is the full documentation for the **Data Cleaning** process.
+<img width="962" height="259" alt="image" src="https://github.com/user-attachments/assets/b983653d-4541-438f-9fbf-6dfe06b05b73" />
+
 
 ---
 
@@ -61,6 +63,8 @@ Two approaches were explored:
 ### ✔️ Approach A: CTE-based duplicate removal
 
 (Attempted but MySQL doesn't support deleting directly from CTE)
+<img width="1457" height="273" alt="image" src="https://github.com/user-attachments/assets/3181a05a-1380-4ab2-b954-ffefbfe30bb0" />
+
 
 ### ✔️ Approach B:
 
@@ -72,6 +76,10 @@ A more reliable method was implemented:
 4. Dropped the `row_num` column after cleanup
 
 This fully removed all true duplicates while preserving the first valid record.
+<img width="1097" height="139" alt="image" src="https://github.com/user-attachments/assets/d10757ad-5c9c-4d72-ba91-2e8c369ef904" />
+<img width="427" height="47" alt="image" src="https://github.com/user-attachments/assets/2c6cfde6-6545-4d4e-8729-8f851e42ca59" />
+
+
 
 ---
 
