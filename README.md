@@ -17,7 +17,7 @@ The dataset is taken from Kaggle:
 This project consists of two main parts:
 
 1. **Data Cleaning (SQL)**
-2. **Exploratory Data Analysis (SQL)** *(will be added soon)*
+2. **Exploratory Data Analysis (SQL)** 
 
 Below is the full documentation for the **Data Cleaning** process.
 <img width="962" height="259" alt="image" src="https://github.com/user-attachments/assets/b983653d-4541-438f-9fbf-6dfe06b05b73" />
